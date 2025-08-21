@@ -1173,7 +1173,7 @@ public class Key implements Comparable<Key> {
                     actionFlags |= ACTION_FLAGS_IS_REPEATABLE;
                 // fallthrough
             case KeyCode.SHIFT, Constants.CODE_ENTER, KeyCode.SHIFT_ENTER, KeyCode.ALPHA, Constants.CODE_SPACE, KeyCode.NUMPAD,
-                    KeyCode.SYMBOL, KeyCode.SYMBOL_ALPHA, KeyCode.LANGUAGE_SWITCH, KeyCode.EMOJI, KeyCode.CLIPBOARD,
+                    KeyCode.SYMBOL, KeyCode.SYMBOL_ALPHA, KeyCode.LANGUAGE_SWITCH, KeyCode.CLIPBOARD,
                     KeyCode.MOVE_START_OF_LINE, KeyCode.MOVE_END_OF_LINE, KeyCode.MOVE_START_OF_PAGE, KeyCode.MOVE_END_OF_PAGE:
                 actionFlags |= ACTION_FLAGS_NO_KEY_PREVIEW; // no preview even if icon!
             }
@@ -1182,7 +1182,7 @@ public class Key implements Comparable<Key> {
             mActionFlags = actionFlags;
 
             final int altCodeInAttr; // settings and language switch keys have alt code space, all others nothing
-            if (mCode == KeyCode.SETTINGS || mCode == KeyCode.LANGUAGE_SWITCH || mCode == KeyCode.EMOJI || mCode == KeyCode.CLIPBOARD)
+            if (mCode == KeyCode.SETTINGS || mCode == KeyCode.LANGUAGE_SWITCH  || mCode == KeyCode.CLIPBOARD)
                 altCodeInAttr = Constants.CODE_SPACE;
             else
                 altCodeInAttr = KeyCode.NOT_SPECIFIED;

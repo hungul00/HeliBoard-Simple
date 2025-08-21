@@ -114,14 +114,14 @@ public final class EmojiAltPhysicalKeyDetector {
 
         final HotKeySet emojiSwitchSet = parseHotKeys(
                 resources, R.array.keyboard_switcher_emoji);
-        final EmojiHotKeys emojiHotKeys = new EmojiHotKeys("emoji", emojiSwitchSet) {
-            @Override
-            protected void action() {
-                final KeyboardSwitcher switcher = KeyboardSwitcher.getInstance();
-                switcher.onToggleKeyboard(KeyboardSwitcher.KeyboardSwitchState.EMOJI);
-            }
-        };
-        mHotKeysList.add(emojiHotKeys);
+//        final EmojiHotKeys emojiHotKeys = new EmojiHotKeys("emoji", emojiSwitchSet) {
+//            @Override
+//            protected void action() {
+//                final KeyboardSwitcher switcher = KeyboardSwitcher.getInstance();
+//                switcher.onToggleKeyboard(KeyboardSwitcher.KeyboardSwitchState.EMOJI);
+//            }
+//        };
+//        mHotKeysList.add(emojiHotKeys);
 
         final HotKeySet symbolsSwitchSet = parseHotKeys(
                 resources, R.array.keyboard_switcher_symbols_shifted);

@@ -86,8 +86,6 @@ class KeyboardIconsSet private constructor() {
         private val alternativeNames = hashMapOf(
             "clear_clipboard_key" to ToolbarKey.CLEAR_CLIPBOARD.name.lowercase(Locale.US),
             "shortcut_key" to ToolbarKey.VOICE.name.lowercase(Locale.US),
-            "emoji_action_key" to ToolbarKey.EMOJI.name.lowercase(Locale.US),
-            "emoji_normal_key" to ToolbarKey.EMOJI.name.lowercase(Locale.US),
             "clipboard_action_key" to ToolbarKey.CLIPBOARD.name.lowercase(Locale.US),
             "clipboard_normal_key" to ToolbarKey.CLIPBOARD.name.lowercase(Locale.US),
             "cut_key" to ToolbarKey.CUT.name.lowercase(Locale.US),
@@ -140,7 +138,6 @@ class KeyboardIconsSet private constructor() {
                     ToolbarKey.AUTOCORRECT -> R.drawable.ic_autocorrect
                     ToolbarKey.CLEAR_CLIPBOARD -> R.drawable.sym_keyboard_clear_clipboard_holo
                     ToolbarKey.CLOSE_HISTORY -> R.drawable.ic_close
-                    ToolbarKey.EMOJI -> R.drawable.sym_keyboard_smiley_holo
                     ToolbarKey.LEFT -> R.drawable.ic_dpad_left
                     ToolbarKey.RIGHT -> R.drawable.ic_dpad_right
                     ToolbarKey.UP -> R.drawable.ic_dpad_up
@@ -201,7 +198,6 @@ class KeyboardIconsSet private constructor() {
                     ToolbarKey.AUTOCORRECT -> R.drawable.ic_autocorrect
                     ToolbarKey.CLEAR_CLIPBOARD -> R.drawable.sym_keyboard_clear_clipboard_lxx
                     ToolbarKey.CLOSE_HISTORY -> R.drawable.ic_close
-                    ToolbarKey.EMOJI -> R.drawable.sym_keyboard_smiley_lxx
                     ToolbarKey.LEFT -> R.drawable.ic_dpad_left
                     ToolbarKey.RIGHT -> R.drawable.ic_dpad_right
                     ToolbarKey.UP -> R.drawable.ic_dpad_up
@@ -262,7 +258,6 @@ class KeyboardIconsSet private constructor() {
                     ToolbarKey.AUTOCORRECT -> R.drawable.ic_autocorrect_rounded
                     ToolbarKey.CLEAR_CLIPBOARD -> R.drawable.sym_keyboard_clear_clipboard_rounded
                     ToolbarKey.CLOSE_HISTORY -> R.drawable.ic_close_rounded
-                    ToolbarKey.EMOJI -> R.drawable.sym_keyboard_smiley_rounded
                     ToolbarKey.LEFT -> R.drawable.ic_dpad_left_rounded
                     ToolbarKey.RIGHT -> R.drawable.ic_dpad_right_rounded
                     ToolbarKey.UP -> R.drawable.ic_dpad_up_rounded

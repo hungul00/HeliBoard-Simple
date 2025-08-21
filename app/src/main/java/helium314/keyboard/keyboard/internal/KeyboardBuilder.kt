@@ -45,11 +45,7 @@ open class KeyboardBuilder<KP : KeyboardParams>(protected val mContext: Context,
 
     fun load(id: KeyboardId): KeyboardBuilder<KP> {
         mParams.mId = id
-        if (id.isEmojiKeyboard) {
-            mParams.mAllowRedundantPopupKeys = true
-            readAttributes(R.xml.kbd_emoji)
-            keysInRows = EmojiParser(mParams, mContext).parse()
-        } else {
+
             try {
                 setupParams()
                 keysInRows = KeyboardParser(mParams, mContext).parseLayout()
@@ -60,7 +56,7 @@ open class KeyboardBuilder<KP : KeyboardParams>(protected val mContext: Context,
                 Log.e(TAG, "error parsing layout $id ${id.mElementId}", e)
                 throw e
             }
-        }
+
         return this
     }
 
@@ -248,7 +244,6 @@ open class KeyboardBuilder<KP : KeyboardParams>(protected val mContext: Context,
         //  -> why is this happening?
         // but anyway, since the height is resized correctly already, we don't need to adjust the
         // occupied height, except for the scrollable emoji keyoards
-        if (!mParams.mId.isEmojiKeyboard) return
         val actualHeight = mCurrentY - mParams.mVerticalGap + mParams.mBottomPadding
         mParams.mOccupiedHeight = mParams.mOccupiedHeight.coerceAtLeast(actualHeight)
     }

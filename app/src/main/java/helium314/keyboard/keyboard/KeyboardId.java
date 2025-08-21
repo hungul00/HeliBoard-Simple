@@ -195,9 +195,6 @@ public final class KeyboardId {
                 || mElementId == ELEMENT_PHONE || mElementId == ELEMENT_PHONE_SYMBOLS;
     }
 
-    public boolean isEmojiKeyboard() {
-        return mElementId >= ELEMENT_EMOJI_RECENTS && mElementId <= ELEMENT_EMOJI_CATEGORY16;
-    }
 
     public boolean isEmojiClipBottomRow() {
         return mElementId == ELEMENT_CLIPBOARD_BOTTOM_ROW || mElementId == ELEMENT_EMOJI_BOTTOM_ROW;

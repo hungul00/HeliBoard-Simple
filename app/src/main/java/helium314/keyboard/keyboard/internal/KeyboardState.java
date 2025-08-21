@@ -806,8 +806,6 @@ public final class KeyboardState {
         // If the code is a letter, update keyboard shift state.
         if (Constants.isLetterCode(code)) {
             updateAlphabetShiftState(autoCapsFlags, recapitalizeMode);
-        } else if (code == KeyCode.EMOJI) {
-            setEmojiKeyboard();
         } else if (code == KeyCode.ALPHA) {
             setAlphabetKeyboard(autoCapsFlags, recapitalizeMode);
         } else if (code == KeyCode.CLIPBOARD) {

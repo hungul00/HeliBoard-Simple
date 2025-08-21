@@ -222,7 +222,6 @@ public final class Constants {
         case KeyCode.ACTION_NEXT: return "actionNext";
         case KeyCode.ACTION_PREVIOUS: return "actionPrevious";
         case KeyCode.LANGUAGE_SWITCH: return "languageSwitch";
-        case KeyCode.EMOJI: return "emoji";
         case KeyCode.CLIPBOARD: return "clipboard";
         case KeyCode.SHIFT_ENTER: return "shiftEnter";
         case KeyCode.NOT_SPECIFIED: return "unspec";

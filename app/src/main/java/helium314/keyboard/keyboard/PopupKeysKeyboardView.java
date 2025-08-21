@@ -133,7 +133,7 @@ public class PopupKeysKeyboardView extends KeyboardView implements PopupKeysPane
     public void showPopupKeysPanel(final View parentView, final Controller controller,
             final int pointX, final int pointY, final EmojiViewCallback emojiViewCallback) {
         mListener = null;
-        mEmojiViewCallback = emojiViewCallback;
+        mEmojiViewCallback = null;
         showPopupKeysPanelInternal(parentView, controller, pointX, pointY);
     }
 

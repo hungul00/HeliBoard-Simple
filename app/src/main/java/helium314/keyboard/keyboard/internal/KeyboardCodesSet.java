@@ -75,7 +75,7 @@ public final class KeyboardCodesSet {
         KeyCode.ACTION_PREVIOUS,
         KeyCode.SHIFT_ENTER,
         KeyCode.LANGUAGE_SWITCH,
-        KeyCode.EMOJI,
+        //KeyCode.EMOJI,
         KeyCode.NOT_SPECIFIED,
         KeyCode.CLIPBOARD,
         KeyCode.TOGGLE_ONE_HANDED_MODE,
