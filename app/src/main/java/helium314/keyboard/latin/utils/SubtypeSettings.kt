@@ -57,6 +57,7 @@ object SubtypeSettings {
         val subtypes = createSettingsSubtypes(prefs.getString(Settings.PREF_ENABLED_SUBTYPES, Defaults.PREF_ENABLED_SUBTYPES)!!) + subtype
         val newString = createPrefSubtypes(subtypes)
         prefs.edit { putString(Settings.PREF_ENABLED_SUBTYPES, newString) }
+        Log.w(TAG, "selected subtype $newString")
 
         if (newSubtype !in enabledSubtypes) {
             enabledSubtypes.add(newSubtype)
@@ -78,6 +79,7 @@ object SubtypeSettings {
         if (selectedSubtype.isAdditionalSubtype(prefs))
             return selectedSubtype.toAdditionalSubtype()
         // no additional subtype, must be a resource subtype
+        Log.w(TAG, "selected subtype $selectedSubtype / ${prefs.getString(Settings.PREF_SELECTED_SUBTYPE, Defaults.PREF_SELECTED_SUBTYPE)} not found")
 
         val subtype = enabledSubtypes.firstOrNull { it.toSettingsSubtype() == selectedSubtype }
         if (subtype != null) {
@@ -194,19 +196,22 @@ object SubtypeSettings {
     }
 
     private fun getDefaultEnabledSubtypes(): List<InputMethodSubtype> {
-        if (systemSubtypes.isNotEmpty()) return systemSubtypes
-        val subtypes = systemLocales.mapNotNull { locale ->
-            val subtypesOfLocale = resourceSubtypesByLocale[locale]
-            // get best match
-                ?: LocaleUtils.getBestMatch(locale, resourceSubtypesByLocale.keys) {it}?.let { resourceSubtypesByLocale[it] }
-            subtypesOfLocale?.firstOrNull()
-        }
-        if (subtypes.isEmpty()) {
-            // hardcoded fallback to en-US for weird cases
-            systemSubtypes.add(resourceSubtypesByLocale[Locale.US]!!.first())
-        } else {
-            systemSubtypes.addAll(subtypes)
-        }
+//        if (systemSubtypes.isNotEmpty()) return systemSubtypes
+//        val subtypes = systemLocales.mapNotNull { locale ->
+//            val subtypesOfLocale = resourceSubtypesByLocale[locale]
+//            // get best match
+//                ?: LocaleUtils.getBestMatch(locale, resourceSubtypesByLocale.keys) {it}?.let { resourceSubtypesByLocale[it] }
+//            subtypesOfLocale?.firstOrNull()
+//        }
+//        if (subtypes.isEmpty()) {
+//            // hardcoded fallback to en-US for weird cases
+//            systemSubtypes.add(resourceSubtypesByLocale[Locale.US]!!.first())
+//        } else {
+//            systemSubtypes.addAll(subtypes)
+//        }
+        systemSubtypes.add(resourceSubtypesByLocale[Locale.US]!!.first())
+        systemSubtypes.add(resourceSubtypesByLocale[Locale.US]!!.first())
+//        prefs.edit { putString(Settings.PREF_ENABLED_SUBTYPES, "locale: en-US§SupportTouchPositionCorrection,TrySuppressingImeSwitcher;ko§CombiningRules=hangul,KeyboardLayoutSet=MAIN:korean,SupportTouchPositionCorrectio") }
         return systemSubtypes
     }
 

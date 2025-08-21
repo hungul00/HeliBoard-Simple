@@ -40,12 +40,12 @@ object Defaults {
         LayoutType.CLIPBOARD_BOTTOM -> "clip_bottom_row"
     }
 
-    private const val DEFAULT_SIZE_SCALE = 1.0f // 100%
+    private const val DEFAULT_SIZE_SCALE = 0.8f // 100%
     const val PREF_THEME_STYLE = KeyboardTheme.STYLE_MATERIAL
     const val PREF_ICON_STYLE = KeyboardTheme.STYLE_MATERIAL
     const val PREF_THEME_COLORS = KeyboardTheme.THEME_LIGHT
     const val PREF_THEME_COLORS_NIGHT = KeyboardTheme.THEME_DARK
-    const val PREF_THEME_KEY_BORDERS = false
+    const val PREF_THEME_KEY_BORDERS = true
     @JvmField
     val PREF_THEME_DAY_NIGHT = Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
     const val PREF_CUSTOM_ICON_NAMES = ""
@@ -70,7 +70,7 @@ object Defaults {
     const val PREF_KEY_USE_PERSONALIZED_DICTS = true
     const val PREF_KEY_USE_DOUBLE_SPACE_PERIOD = true
     const val PREF_BLOCK_POTENTIALLY_OFFENSIVE = true
-    const val PREF_SHOW_LANGUAGE_SWITCH_KEY = false
+    const val PREF_SHOW_LANGUAGE_SWITCH_KEY = true
     const val PREF_LANGUAGE_SWITCH_KEY = "internal"
     const val PREF_SHOW_EMOJI_KEY = false
     const val PREF_VARIABLE_TOOLBAR_DIRECTION = true
@@ -142,8 +142,8 @@ object Defaults {
     @JvmField
     val PREF_NAVBAR_COLOR = Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
     const val PREF_NARROW_KEY_GAPS = false
-    const val PREF_ENABLED_SUBTYPES = ""
-    const val PREF_SELECTED_SUBTYPE = ""
+    const val PREF_ENABLED_SUBTYPES = "en-US§SupportTouchPositionCorrection,TrySuppressingImeSwitcher;ko§CombiningRules=hangul,KeyboardLayoutSet=MAIN:korean,SupportTouchPositionCorrectio;und§SupportTouchPositionCorrection,TrySuppressingImeSwitcher"
+    const val PREF_SELECTED_SUBTYPE = "ko§CombiningRules=hangul,KeyboardLayoutSet=MAIN:korean,SupportTouchPositionCorrection"
     const val PREF_URL_DETECTION = false
     const val PREF_DONT_SHOW_MISSING_DICTIONARY_DIALOG = false
     const val PREF_TOOLBAR_MODE = "EXPANDABLE"
