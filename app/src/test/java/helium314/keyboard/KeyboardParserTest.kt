@@ -1,27 +1,27 @@
 // SPDX-License-Identifier: GPL-3.0-only
-package helium314.keyboard
+package lingu.keyboard
 
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodSubtype
 import com.android.inputmethod.keyboard.ProximityInfo
-import helium314.keyboard.keyboard.Key.KeyParams
-import helium314.keyboard.keyboard.Keyboard
-import helium314.keyboard.keyboard.KeyboardId
-import helium314.keyboard.keyboard.KeyboardLayoutSet
-import helium314.keyboard.keyboard.internal.KeySpecParser.KeySpecParserError
-import helium314.keyboard.keyboard.internal.KeyboardBuilder
-import helium314.keyboard.keyboard.internal.KeyboardParams
-import helium314.keyboard.keyboard.internal.TouchPositionCorrection
-import helium314.keyboard.keyboard.internal.UniqueKeysCache
-import helium314.keyboard.keyboard.internal.keyboard_parser.LayoutParser
-import helium314.keyboard.keyboard.internal.keyboard_parser.POPUP_KEYS_NORMAL
-import helium314.keyboard.keyboard.internal.keyboard_parser.addLocaleKeyTextsToParams
-import helium314.keyboard.keyboard.internal.keyboard_parser.floris.KeyCode
-import helium314.keyboard.latin.LatinIME
-import helium314.keyboard.latin.RichInputMethodSubtype
-import helium314.keyboard.latin.utils.LayoutUtilsCustom
-import helium314.keyboard.latin.utils.POPUP_KEYS_LAYOUT
-import helium314.keyboard.latin.utils.SubtypeUtilsAdditional
+import lingu.keyboard.keyboard.Key.KeyParams
+import lingu.keyboard.keyboard.Keyboard
+import lingu.keyboard.keyboard.KeyboardId
+import lingu.keyboard.keyboard.KeyboardLayoutSet
+import lingu.keyboard.keyboard.internal.KeySpecParser.KeySpecParserError
+import lingu.keyboard.keyboard.internal.KeyboardBuilder
+import lingu.keyboard.keyboard.internal.KeyboardParams
+import lingu.keyboard.keyboard.internal.TouchPositionCorrection
+import lingu.keyboard.keyboard.internal.UniqueKeysCache
+import lingu.keyboard.keyboard.internal.keyboard_parser.LayoutParser
+import lingu.keyboard.keyboard.internal.keyboard_parser.POPUP_KEYS_NORMAL
+import lingu.keyboard.keyboard.internal.keyboard_parser.addLocaleKeyTextsToParams
+import lingu.keyboard.keyboard.internal.keyboard_parser.floris.KeyCode
+import lingu.keyboard.latin.LatinIME
+import lingu.keyboard.latin.RichInputMethodSubtype
+import lingu.keyboard.latin.utils.LayoutUtilsCustom
+import lingu.keyboard.latin.utils.POPUP_KEYS_LAYOUT
+import lingu.keyboard.latin.utils.SubtypeUtilsAdditional
 import org.junit.runner.RunWith
 import org.robolectric.Robolectric
 import org.robolectric.RobolectricTestRunner
@@ -72,7 +72,7 @@ f
 a
 b
 c
-    
+
 d
 e
 f
@@ -98,8 +98,8 @@ f
 
 """, // too many newlines
 """
-a 
-b x  
+a
+b x
 c v
 
 d
@@ -293,7 +293,7 @@ f""", // no newline at the end
       } }
     }]]""", Expected('('.code, "(", popups = listOf("<", "[", "{").map { it to it.first().code }))
     }
-    
+
     @Test fun autoMultiTextKey() {
         assertIsExpected("""[[{ "label": "্র" }]]""", Expected(KeyCode.MULTIPLE_CODE_POINTS, "্র", text = "্র"))
     }

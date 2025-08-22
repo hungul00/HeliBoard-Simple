@@ -9,7 +9,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "helium314.keyboard"
+        applicationId = "lingu.keyboard"
         minSdk = 21
         targetSdk = 35
         versionCode = 3300
@@ -85,7 +85,6 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_17.toString()
     }
@@ -96,7 +95,7 @@ android {
         includeInBundle = false
     }
 
-    namespace = "helium314.keyboard.latin"
+    namespace = "lingu.keyboard.latin"
     lint {
         abortOnError = true
     }

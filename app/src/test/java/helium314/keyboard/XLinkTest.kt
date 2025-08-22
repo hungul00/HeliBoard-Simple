@@ -1,11 +1,11 @@
-package helium314.keyboard
+package lingu.keyboard
 
 import androidx.test.core.app.ApplicationProvider
-import helium314.keyboard.latin.App
-import helium314.keyboard.latin.BuildConfig
-import helium314.keyboard.latin.common.Links
-import helium314.keyboard.latin.common.LocaleUtils.constructLocale
-import helium314.keyboard.latin.utils.getKnownDictionariesForLocale
+import lingu.keyboard.latin.App
+import lingu.keyboard.latin.BuildConfig
+import lingu.keyboard.latin.common.Links
+import lingu.keyboard.latin.common.LocaleUtils.constructLocale
+import lingu.keyboard.latin.utils.getKnownDictionariesForLocale
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import java.net.HttpURLConnection

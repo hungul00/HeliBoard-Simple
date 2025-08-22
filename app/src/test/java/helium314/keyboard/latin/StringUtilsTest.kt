@@ -1,20 +1,20 @@
 // SPDX-License-Identifier: GPL-3.0-only
-package helium314.keyboard.latin
+package lingu.keyboard.latin
 
 import androidx.test.core.app.ApplicationProvider
-import helium314.keyboard.ShadowInputMethodManager2
-import helium314.keyboard.latin.common.StringUtils
-import helium314.keyboard.latin.common.codePointAt
-import helium314.keyboard.latin.common.codePointBefore
-import helium314.keyboard.latin.common.endsWithWordCodepoint
-import helium314.keyboard.latin.common.getFullEmojiAtEnd
-import helium314.keyboard.latin.common.getTouchedWordRange
-import helium314.keyboard.latin.common.isEmoji
-import helium314.keyboard.latin.common.nonWordCodePointAndNoSpaceBeforeCursor
-import helium314.keyboard.latin.common.splitOnWhitespace
-import helium314.keyboard.latin.settings.SpacingAndPunctuations
-import helium314.keyboard.latin.utils.ScriptUtils
-import helium314.keyboard.latin.utils.TextRange
+import lingu.keyboard.ShadowInputMethodManager2
+import lingu.keyboard.latin.common.StringUtils
+import lingu.keyboard.latin.common.codePointAt
+import lingu.keyboard.latin.common.codePointBefore
+import lingu.keyboard.latin.common.endsWithWordCodepoint
+import lingu.keyboard.latin.common.getFullEmojiAtEnd
+import lingu.keyboard.latin.common.getTouchedWordRange
+import lingu.keyboard.latin.common.isEmoji
+import lingu.keyboard.latin.common.nonWordCodePointAndNoSpaceBeforeCursor
+import lingu.keyboard.latin.common.splitOnWhitespace
+import lingu.keyboard.latin.settings.SpacingAndPunctuations
+import lingu.keyboard.latin.utils.ScriptUtils
+import lingu.keyboard.latin.utils.TextRange
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
