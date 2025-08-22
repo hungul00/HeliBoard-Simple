@@ -196,10 +196,6 @@ public final class KeyboardId {
     }
 
 
-    public boolean isEmojiClipBottomRow() {
-        return mElementId == ELEMENT_CLIPBOARD_BOTTOM_ROW || mElementId == ELEMENT_EMOJI_BOTTOM_ROW;
-    }
-
     public int imeAction() {
         return InputTypeUtils.getImeOptionsActionIdFromEditorInfo(mEditorInfo);
     }

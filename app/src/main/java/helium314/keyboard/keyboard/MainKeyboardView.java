@@ -365,10 +365,10 @@ public final class MainKeyboardView extends KeyboardView implements DrawingProxy
         if (keyboard == null) {
             return;
         }
-        mKeyPreviewDrawParams.setVisibleOffset(-keyboard.mVerticalGap);
-        if (withPreview && !key.noKeyPreview() && mKeyPreviewDrawParams.isPopupEnabled()) {
-            showKeyPreview(key);
-        }
+//        mKeyPreviewDrawParams.setVisibleOffset(-keyboard.mVerticalGap);
+//        if (withPreview && !key.noKeyPreview() && mKeyPreviewDrawParams.isPopupEnabled()) {
+//            showKeyPreview(key);
+//        }
     }
 
     private void showKeyPreview(@NonNull final Key key) {
