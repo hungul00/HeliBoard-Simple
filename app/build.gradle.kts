@@ -52,7 +52,7 @@ android {
             signingConfig = signingConfigs.getByName("debug")
             applicationIdSuffix = ".debug"
         }
-        base.archivesBaseName = "HeliBoard_" + defaultConfig.versionName
+        base.archivesBaseName = "LKS Board_" + defaultConfig.versionName
     }
 
     buildFeatures {
