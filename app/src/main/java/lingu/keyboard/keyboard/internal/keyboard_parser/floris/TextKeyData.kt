@@ -103,8 +103,8 @@ sealed interface KeyData : AbstractKeyData {
                 keys.add("!icon/language_switch_key|!code/key_language_switch")
 //            if (!params.mId.mOneHandedModeEnabled)
 //                keys.add("!icon/start_onehanded_mode_key|!code/key_toggle_onehanded")
-//            if (!params.mId.mDeviceLocked)
-//                keys.add("!icon/settings_key|!code/key_settings")
+            if (!params.mId.mDeviceLocked)
+                keys.add("!icon/settings_key|!code/key_settings")
             if (shouldShowTldPopups(params)) {
                 keys.add(",")
             }
@@ -416,7 +416,7 @@ sealed interface KeyData : AbstractKeyData {
         }
         if (type == KeyType.PLACEHOLDER) return Key.BACKGROUND_TYPE_EMPTY
         if ((params.mId.mElementId == KeyboardId.ELEMENT_SYMBOLS || params.mId.mElementId == KeyboardId.ELEMENT_SYMBOLS_SHIFTED)
-                && (groupId == GROUP_PERIOD))
+                && (groupId == GROUP_COMMA || groupId == GROUP_PERIOD))
             return Key.BACKGROUND_TYPE_FUNCTIONAL
         return Key.BACKGROUND_TYPE_NORMAL
     }
@@ -482,12 +482,12 @@ sealed interface KeyData : AbstractKeyData {
     }
 
     private fun getAdditionalPopupKeys(params: KeyboardParams): PopupSet<AbstractKeyData>? {
-        //if (groupId == GROUP_COMMA) return SimplePopups(getCommaPopupKeys(params))
+        if (groupId == GROUP_COMMA) return SimplePopups(getCommaPopupKeys(params))
         if (groupId == GROUP_PERIOD) return getPeriodPopups(params)
         if (groupId == GROUP_ENTER) return getActionKeyPopupKeys(params)
         if (groupId == GROUP_NO_DEFAULT_POPUP) return null
         return when (label) {
-            //KeyLabel.COMMA -> SimplePopups(getCommaPopupKeys(params))
+            KeyLabel.COMMA -> SimplePopups(getCommaPopupKeys(params))
             KeyLabel.PERIOD -> getPeriodPopups(params)
             KeyLabel.ACTION -> getActionKeyPopupKeys(params)
             KeyLabel.SHIFT -> {
