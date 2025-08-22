@@ -4,7 +4,7 @@ necessary;
 * a single thing only
 * describe it properly
 recommended:
-* make changes optional
+  * make changes optional
 * re-use existing mechanisms / code
 * low performance impact
 * make it a draft if you still want to work on it
