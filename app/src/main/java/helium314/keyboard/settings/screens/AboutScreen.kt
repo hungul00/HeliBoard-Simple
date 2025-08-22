@@ -52,9 +52,9 @@ fun AboutScreen(
         SettingsWithoutKey.APP,
         SettingsWithoutKey.VERSION,
         SettingsWithoutKey.LICENSE,
-        SettingsWithoutKey.HIDDEN_FEATURES,
-        SettingsWithoutKey.GITHUB_WIKI,
-        SettingsWithoutKey.GITHUB,
+//        SettingsWithoutKey.HIDDEN_FEATURES,
+//        SettingsWithoutKey.GITHUB_WIKI,
+//        SettingsWithoutKey.GITHUB,
         SettingsWithoutKey.SAVE_LOG,
     )
     SearchSettingsScreen(
@@ -105,58 +105,58 @@ fun createAboutSettings(context: Context) = listOf(
             icon = R.drawable.ic_settings_about_license
         )
     },
-    Setting(context, SettingsWithoutKey.HIDDEN_FEATURES, R.string.hidden_features_title, R.string.hidden_features_summary) {
-        val ctx = LocalContext.current
-        Preference(
-            name = it.title,
-            description = it.description,
-            onClick = {
-                // Compose dialogs are in a rather sad state. They don't understand HTML, and don't scroll without customization.
-                // this should be re-done in compose, but... bah
-                val link = ("<a href=\"https://developer.android.com/reference/android/content/Context#createDeviceProtectedStorageContext()\">"
-                        + ctx.getString(R.string.hidden_features_text) + "</a>")
-                val message = ctx.getString(R.string.hidden_features_message, link)
-                val dialogMessage = SpannableStringUtils.fromHtml(message)
-                val builder = AlertDialog.Builder(ctx)
-                    .setIcon(R.drawable.ic_settings_about_hidden_features)
-                    .setTitle(R.string.hidden_features_title)
-                    .setMessage(dialogMessage)
-                    .setPositiveButton(R.string.dialog_close, null)
-                    .create()
-                builder.show()
-                (builder.findViewById<View>(android.R.id.message) as TextView).movementMethod = LinkMovementMethod.getInstance()
-            },
-            icon = R.drawable.ic_settings_about_hidden_features
-        )
-    },
-    Setting(context, SettingsWithoutKey.GITHUB_WIKI, R.string.about_wiki_link, R.string.about_wiki_link_description) {
-        val ctx = LocalContext.current
-        Preference(
-            name = it.title,
-            description = it.description,
-            onClick = {
-                val intent = Intent()
-                intent.data = Links.WIKI_URL.toUri()
-                intent.action = Intent.ACTION_VIEW
-                ctx.startActivity(intent)
-            },
-            icon = R.drawable.ic_settings_about_wiki
-        )
-    },
-    Setting(context, SettingsWithoutKey.GITHUB, R.string.about_github_link) {
-        val ctx = LocalContext.current
-        Preference(
-            name = it.title,
-            description = it.description,
-            onClick = {
-                val intent = Intent()
-                intent.data = Links.GITHUB.toUri()
-                intent.action = Intent.ACTION_VIEW
-                ctx.startActivity(intent)
-            },
-            icon = R.drawable.ic_settings_about_github
-        )
-    },
+//    Setting(context, SettingsWithoutKey.HIDDEN_FEATURES, R.string.hidden_features_title, R.string.hidden_features_summary) {
+//        val ctx = LocalContext.current
+//        Preference(
+//            name = it.title,
+//            description = it.description,
+//            onClick = {
+//                // Compose dialogs are in a rather sad state. They don't understand HTML, and don't scroll without customization.
+//                // this should be re-done in compose, but... bah
+//                val link = ("<a href=\"https://developer.android.com/reference/android/content/Context#createDeviceProtectedStorageContext()\">"
+//                        + ctx.getString(R.string.hidden_features_text) + "</a>")
+//                val message = ctx.getString(R.string.hidden_features_message, link)
+//                val dialogMessage = SpannableStringUtils.fromHtml(message)
+//                val builder = AlertDialog.Builder(ctx)
+//                    .setIcon(R.drawable.ic_settings_about_hidden_features)
+//                    .setTitle(R.string.hidden_features_title)
+//                    .setMessage(dialogMessage)
+//                    .setPositiveButton(R.string.dialog_close, null)
+//                    .create()
+//                builder.show()
+//                (builder.findViewById<View>(android.R.id.message) as TextView).movementMethod = LinkMovementMethod.getInstance()
+//            },
+//            icon = R.drawable.ic_settings_about_hidden_features
+//        )
+//    },
+//    Setting(context, SettingsWithoutKey.GITHUB_WIKI, R.string.about_wiki_link, R.string.about_wiki_link_description) {
+//        val ctx = LocalContext.current
+//        Preference(
+//            name = it.title,
+//            description = it.description,
+//            onClick = {
+//                val intent = Intent()
+//                intent.data = Links.WIKI_URL.toUri()
+//                intent.action = Intent.ACTION_VIEW
+//                ctx.startActivity(intent)
+//            },
+//            icon = R.drawable.ic_settings_about_wiki
+//        )
+//    },
+//    Setting(context, SettingsWithoutKey.GITHUB, R.string.about_github_link) {
+//        val ctx = LocalContext.current
+//        Preference(
+//            name = it.title,
+//            description = it.description,
+//            onClick = {
+//                val intent = Intent()
+//                intent.data = Links.GITHUB.toUri()
+//                intent.action = Intent.ACTION_VIEW
+//                ctx.startActivity(intent)
+//            },
+//            icon = R.drawable.ic_settings_about_github
+//        )
+//    },
     Setting(context, SettingsWithoutKey.SAVE_LOG, R.string.save_log) { setting ->
         val ctx = LocalContext.current
         val scope = rememberCoroutineScope()

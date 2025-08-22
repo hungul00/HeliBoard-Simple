@@ -30,15 +30,15 @@ import helium314.keyboard.settings.previewDark
 @Composable
 fun MainSettingsScreen(
     onClickAbout: () -> Unit,
-    onClickTextCorrection: () -> Unit,
+//    onClickTextCorrection: () -> Unit,
     onClickPreferences: () -> Unit,
-    onClickToolbar: () -> Unit,
-    onClickGestureTyping: () -> Unit,
-    onClickAdvanced: () -> Unit,
-    onClickAppearance: () -> Unit,
+//    onClickToolbar: () -> Unit,
+//    onClickGestureTyping: () -> Unit,
+//    onClickAdvanced: () -> Unit,
+//    onClickAppearance: () -> Unit,
     onClickLanguage: () -> Unit,
-    onClickLayouts: () -> Unit,
-    onClickDictionaries: () -> Unit,
+//    onClickLayouts: () -> Unit,
+//    onClickDictionaries: () -> Unit,
     onClickBack: () -> Unit,
 ) {
     SearchSettingsScreen(
@@ -55,49 +55,49 @@ fun MainSettingsScreen(
                     name = stringResource(R.string.language_and_layouts_title),
                     description = enabledSubtypes.joinToString(", ") { it.displayName() },
                     onClick = onClickLanguage,
-                    icon = R.drawable.ic_settings_languages
+                    //icon = R.drawable.ic_settings_languages
                 ) { NextScreenIcon() }
                 Preference(
                     name = stringResource(R.string.settings_screen_preferences),
                     onClick = onClickPreferences,
                     icon = R.drawable.ic_settings_preferences
                 ) { NextScreenIcon() }
-                Preference(
-                    name = stringResource(R.string.settings_screen_appearance),
-                    onClick = onClickAppearance,
-                    icon = R.drawable.ic_settings_appearance
-                ) { NextScreenIcon() }
-                Preference(
-                    name = stringResource(R.string.settings_screen_toolbar),
-                    onClick = onClickToolbar,
-                    icon = R.drawable.ic_settings_toolbar
-                ) { NextScreenIcon() }
-                if (JniUtils.sHaveGestureLib)
-                    Preference(
-                        name = stringResource(R.string.settings_screen_gesture),
-                        onClick = onClickGestureTyping,
-                        icon = R.drawable.ic_settings_gesture
-                    ) { NextScreenIcon() }
-                Preference(
-                    name = stringResource(R.string.settings_screen_correction),
-                    onClick = onClickTextCorrection,
-                    icon = R.drawable.ic_settings_correction
-                ) { NextScreenIcon() }
-                Preference(
-                    name = stringResource(R.string.settings_screen_secondary_layouts),
-                    onClick = onClickLayouts,
-                    icon = R.drawable.ic_ime_switcher
-                ) { NextScreenIcon() }
-                Preference(
-                    name = stringResource(R.string.dictionary_settings_category),
-                    onClick = onClickDictionaries,
-                    icon = R.drawable.ic_dictionary
-                ) { NextScreenIcon() }
-                Preference(
-                    name = stringResource(R.string.settings_screen_advanced),
-                    onClick = onClickAdvanced,
-                    icon = R.drawable.ic_settings_advanced
-                ) { NextScreenIcon() }
+//                Preference(
+//                    name = stringResource(R.string.settings_screen_appearance),
+//                    onClick = onClickAppearance,
+//                    icon = R.drawable.ic_settings_appearance
+//                ) { NextScreenIcon() }
+//                Preference(
+//                    name = stringResource(R.string.settings_screen_toolbar),
+//                    onClick = onClickToolbar,
+//                    icon = R.drawable.ic_settings_toolbar
+//                ) { NextScreenIcon() }
+//                if (JniUtils.sHaveGestureLib)
+//                    Preference(
+//                        name = stringResource(R.string.settings_screen_gesture),
+//                        onClick = onClickGestureTyping,
+//                        icon = R.drawable.ic_settings_gesture
+//                    ) { NextScreenIcon() }
+//                Preference(
+//                    name = stringResource(R.string.settings_screen_correction),
+//                    onClick = onClickTextCorrection,
+//                    icon = R.drawable.ic_settings_correction
+//                ) { NextScreenIcon() }
+//                Preference(
+//                    name = stringResource(R.string.settings_screen_secondary_layouts),
+//                    onClick = onClickLayouts,
+//                    icon = R.drawable.ic_ime_switcher
+//                ) { NextScreenIcon() }
+//                Preference(
+//                    name = stringResource(R.string.dictionary_settings_category),
+//                    onClick = onClickDictionaries,
+//                    icon = R.drawable.ic_dictionary
+//                ) { NextScreenIcon() }
+//                Preference(
+//                    name = stringResource(R.string.settings_screen_advanced),
+//                    onClick = onClickAdvanced,
+//                    icon = R.drawable.ic_settings_advanced
+//                ) { NextScreenIcon() }
                 Preference(
                     name = stringResource(R.string.settings_screen_about),
                     onClick = onClickAbout,
@@ -114,7 +114,7 @@ private fun PreviewScreen() {
     initPreview(LocalContext.current)
     Theme(previewDark) {
         Surface {
-            MainSettingsScreen({}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {})
+            MainSettingsScreen({}, {}, {}, {})
         }
     }
 }

@@ -66,15 +66,15 @@ fun SettingsNavHost(
         composable(SettingsDestination.Settings) {
             MainSettingsScreen(
                 onClickAbout = { navController.navigate(SettingsDestination.About) },
-                onClickTextCorrection = { navController.navigate(SettingsDestination.TextCorrection) },
+//                onClickTextCorrection = { navController.navigate(SettingsDestination.TextCorrection) },
                 onClickPreferences = { navController.navigate(SettingsDestination.Preferences) },
-                onClickToolbar = { navController.navigate(SettingsDestination.Toolbar) },
-                onClickGestureTyping = { navController.navigate(SettingsDestination.GestureTyping) },
-                onClickAdvanced = { navController.navigate(SettingsDestination.Advanced) },
-                onClickAppearance = { navController.navigate(SettingsDestination.Appearance) },
-                onClickLanguage = { navController.navigate(SettingsDestination.Languages) },
-                onClickLayouts = { navController.navigate(SettingsDestination.Layouts) },
-                onClickDictionaries = { navController.navigate(SettingsDestination.Dictionaries) },
+//                onClickToolbar = { navController.navigate(SettingsDestination.Toolbar) },
+//                onClickGestureTyping = { navController.navigate(SettingsDestination.GestureTyping) },
+//                onClickAdvanced = { navController.navigate(SettingsDestination.Advanced) },
+//                onClickAppearance = { navController.navigate(SettingsDestination.Appearance) },
+                onClickLanguage = { },
+//                onClickLayouts = { navController.navigate(SettingsDestination.Layouts) },
+//                onClickDictionaries = { navController.navigate(SettingsDestination.Dictionaries) },
                 onClickBack = ::goBack,
             )
         }
