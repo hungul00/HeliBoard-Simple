@@ -141,7 +141,7 @@ object Defaults {
     @JvmField
     val PREF_NAVBAR_COLOR = Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
     const val PREF_NARROW_KEY_GAPS = false
-    const val PREF_ENABLED_SUBTYPES = "en-US§SupportTouchPositionCorrection,TrySuppressingImeSwitcher;ko§CombiningRules=hangul,KeyboardLayoutSet=MAIN:korean,SupportTouchPositionCorrectio;und§SupportTouchPositionCorrection,TrySuppressingImeSwitcher"
+    const val PREF_ENABLED_SUBTYPES = "en-US§SupportTouchPositionCorrection,TrySuppressingImeSwitcher;ko§CombiningRules=hangul,KeyboardLayoutSet=MAIN:korean,SupportTouchPositionCorrectio"
     const val PREF_SELECTED_SUBTYPE = "ko§CombiningRules=hangul,KeyboardLayoutSet=MAIN:korean,SupportTouchPositionCorrection"
     const val PREF_URL_DETECTION = false
     const val PREF_DONT_SHOW_MISSING_DICTIONARY_DIALOG = false
