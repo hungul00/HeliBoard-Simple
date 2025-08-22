@@ -230,7 +230,7 @@ class KeyboardParser(private val params: KeyboardParams, private val context: Co
         if (baseKeys.last().size == 2) {
             val newComma = baseKeys.last()[0]
             functionalKeysBottom.replaceFirst(
-                { it.label == KeyLabel.COMMA || it.groupId == KeyData.GROUP_COMMA},
+                { it.label == KeyLabel.COMMA},
                 { newComma.copy(newGroupId = 1, newType = newComma.type, newLabelFlags = it.labelFlags or newComma.labelFlags) }
             )
             val newPeriod = baseKeys.last()[1]
