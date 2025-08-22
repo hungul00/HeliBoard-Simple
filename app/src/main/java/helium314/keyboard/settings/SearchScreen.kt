@@ -155,42 +155,44 @@ fun <T: Any?> SearchScreen(
                             }
                         },
                         actions = {
-                            if (icon == null)
-                                IconButton(onClick = { setShowSearch(!showSearch) }) { SearchIcon() }
-                            else
+                            if (icon != null)
                                 icon()
-                            if (menu != null)
-                                Box {
-                                    var showMenu by remember { mutableStateOf(false) }
-                                    IconButton(
-                                        onClick = { showMenu = true }
-                                    ) { Icon(painterResource(R.drawable.ic_arrow_left), "menu", Modifier.rotate(-90f)) }
-                                    DropdownMenu(
-                                        expanded = showMenu,
-                                        onDismissRequest = { showMenu = false }
-                                    ) {
-                                        menu.forEach {
-                                            DropdownMenuItem(
-                                                text = { Text(it.first) },
-                                                onClick = { showMenu = false; it.second() }
-                                            )
-                                        }
-                                    }
-                                }
+
+//                                IconButton(onClick = { setShowSearch(!showSearch) }) { SearchIcon() }
+//                            else
+//                                icon()
+//                            if (menu != null)
+//                                Box {
+//                                    var showMenu by remember { mutableStateOf(false) }
+//                                    IconButton(
+//                                        onClick = { showMenu = true }
+//                                    ) { Icon(painterResource(R.drawable.ic_arrow_left), "menu", Modifier.rotate(-90f)) }
+//                                    DropdownMenu(
+//                                        expanded = showMenu,
+//                                        onDismissRequest = { showMenu = false }
+//                                    ) {
+//                                        menu.forEach {
+//                                            DropdownMenuItem(
+//                                                text = { Text(it.first) },
+//                                                onClick = { showMenu = false; it.second() }
+//                                            )
+//                                        }
+//                                    }
+//                                }
                         },
                     )
-                    ExpandableSearchField(
-                        expanded = showSearch,
-                        onDismiss = { setShowSearch(false) },
-                        search = searchText,
-                        onSearchChange = { searchText = it },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 16.dp, vertical = 8.dp),
-                        colors = TextFieldDefaults.colors(
-                            focusedContainerColor = MaterialTheme.colorScheme.surface
-                        )
-                    )
+//                    ExpandableSearchField(
+//                        expanded = showSearch,
+//                        onDismiss = { setShowSearch(false) },
+//                        search = searchText,
+//                        onSearchChange = { searchText = it },
+//                        modifier = Modifier
+//                            .fillMaxWidth()
+//                            .padding(horizontal = 16.dp, vertical = 8.dp),
+//                        colors = TextFieldDefaults.colors(
+//                            focusedContainerColor = MaterialTheme.colorScheme.surface
+//                        )
+//                    )
                 }
             }
             CompositionLocalProvider(LocalTextStyle provides MaterialTheme.typography.bodyLarge) {
