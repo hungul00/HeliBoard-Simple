@@ -55,8 +55,8 @@ fun MainSettingsScreen(
                     name = stringResource(R.string.language_and_layouts_title),
                     description = enabledSubtypes.joinToString(", ") { it.displayName() },
                     onClick = onClickLanguage,
-                    //icon = R.drawable.ic_settings_languages
-                ) { NextScreenIcon() }
+                    icon = R.drawable.ic_settings_languages
+                )
                 Preference(
                     name = stringResource(R.string.settings_screen_preferences),
                     onClick = onClickPreferences,
