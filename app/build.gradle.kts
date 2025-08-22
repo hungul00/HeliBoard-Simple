@@ -89,7 +89,6 @@ android {
         jvmTarget = JavaVersion.VERSION_17.toString()
     }
 
-    // see https://github.com/Helium314/HeliBoard/issues/477
     dependenciesInfo {
         includeInApk = false
         includeInBundle = false
@@ -121,11 +120,4 @@ dependencies {
     implementation("sh.calvin.reorderable:reorderable:2.4.3") // for easier re-ordering
     implementation("com.github.skydoves:colorpicker-compose:1.1.2") // for user-defined colors
 
-    // test
-    testImplementation(kotlin("test"))
-    testImplementation("junit:junit:4.13.2")
-    testImplementation("org.mockito:mockito-core:5.17.0")
-    testImplementation("org.robolectric:robolectric:4.14.1")
-    testImplementation("androidx.test:runner:1.6.2")
-    testImplementation("androidx.test:core:1.6.1")
 }
