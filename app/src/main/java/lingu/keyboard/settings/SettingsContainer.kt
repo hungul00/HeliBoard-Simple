@@ -12,6 +12,7 @@ import lingu.keyboard.settings.screens.createAppearanceSettings
 import lingu.keyboard.settings.screens.createCorrectionSettings
 import lingu.keyboard.settings.screens.createGestureTypingSettings
 import lingu.keyboard.settings.screens.createLayoutSettings
+import lingu.keyboard.settings.screens.createOpenSourceSettings
 import lingu.keyboard.settings.screens.createPreferencesSettings
 import lingu.keyboard.settings.screens.createToolbarSettings
 
@@ -64,7 +65,7 @@ class Setting(
 // intentionally not putting individual debug settings in here so user knows the context
 private fun createSettings(context: Context) = createAboutSettings(context) + createAppearanceSettings(context) +
         createCorrectionSettings(context) + createPreferencesSettings(context) + createToolbarSettings(context) +
-        createLayoutSettings(context) + createAdvancedSettings(context) +
+        createLayoutSettings(context) + createAdvancedSettings(context) + createOpenSourceSettings(context) +
         if (JniUtils.sHaveGestureLib) createGestureTypingSettings(context) else emptyList()
 
 object SettingsWithoutKey {

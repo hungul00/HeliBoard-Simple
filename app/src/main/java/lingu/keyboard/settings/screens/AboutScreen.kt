@@ -91,20 +91,20 @@ fun createAboutSettings(context: Context) = listOf(
             icon = R.drawable.ic_settings_about
         )
     },
-    Setting(context, SettingsWithoutKey.LICENSE, R.string.license, R.string.gnu_gpl) {
-        val ctx = LocalContext.current
-        Preference(
-            name = it.title,
-            description = it.description,
-            onClick = {
-                val intent = Intent()
-                intent.data = Links.LICENSE.toUri()
-                intent.action = Intent.ACTION_VIEW
-                ctx.startActivity(intent)
-            },
-            icon = R.drawable.ic_settings_about_license
-        )
-    },
+//    Setting(context, SettingsWithoutKey.LICENSE, R.string.license, R.string.gnu_gpl) {
+//        val ctx = LocalContext.current
+//        Preference(
+//            name = it.title,
+//            description = it.description,
+//            onClick = {
+//                val intent = Intent()
+//                intent.data = Links.LICENSE.toUri()
+//                intent.action = Intent.ACTION_VIEW
+//                ctx.startActivity(intent)
+//            },
+//            icon = R.drawable.ic_settings_about_license
+//        )
+//    },
 //    Setting(context, SettingsWithoutKey.HIDDEN_FEATURES, R.string.hidden_features_title, R.string.hidden_features_summary) {
 //        val ctx = LocalContext.current
 //        Preference(

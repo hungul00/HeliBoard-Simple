@@ -37,6 +37,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
+import lingu.keyboard.settings.screens.OpenSourceScreen
 
 @Composable
 fun SettingsNavHost(
@@ -75,6 +76,7 @@ fun SettingsNavHost(
                 onClickLanguage = { },
 //                onClickLayouts = { navController.navigate(SettingsDestination.Layouts) },
 //                onClickDictionaries = { navController.navigate(SettingsDestination.Dictionaries) },
+                onClickOpenSource = { navController.navigate(SettingsDestination.OpenSource) },
                 onClickBack = ::goBack,
             )
         }
@@ -130,6 +132,9 @@ fun SettingsNavHost(
         composable(SettingsDestination.Subtype + "{subtype}") {
             SubtypeScreen(initialSubtype = it.arguments?.getString("subtype")!!.toSettingsSubtype(), onClickBack = ::goBack)
         }
+        composable(SettingsDestination.OpenSource) {
+            OpenSourceScreen(onClickBack = ::goBack)
+        }
     }
     if (target.value != SettingsDestination.Settings/* && target.value != navController.currentBackStackEntry?.destination?.route*/)
         navController.navigate(route = target.value)
@@ -153,6 +158,7 @@ object SettingsDestination {
     const val Subtype = "subtype/"
     const val Layouts = "layouts"
     const val Dictionaries = "dictionaries"
+    const val OpenSource = "open_source"
     val navTarget = MutableStateFlow(Settings)
 
     private val navScope = CoroutineScope(Dispatchers.Default)
