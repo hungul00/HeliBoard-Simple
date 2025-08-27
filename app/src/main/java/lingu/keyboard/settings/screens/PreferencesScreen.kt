@@ -9,7 +9,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import lingu.keyboard.keyboard.KeyboardLayoutSet
 import lingu.keyboard.keyboard.KeyboardSwitcher
 import lingu.keyboard.latin.AudioAndHapticFeedbackManager
 import lingu.keyboard.latin.R
@@ -20,9 +19,7 @@ import lingu.keyboard.latin.utils.SubtypeSettings
 import lingu.keyboard.latin.utils.getActivity
 import lingu.keyboard.latin.utils.locale
 import lingu.keyboard.latin.utils.prefs
-import lingu.keyboard.settings.preferences.ListPreference
 import lingu.keyboard.settings.Setting
-import lingu.keyboard.settings.preferences.ReorderSwitchPreference
 import lingu.keyboard.settings.SearchSettingsScreen
 import lingu.keyboard.settings.SettingsActivity
 import lingu.keyboard.settings.preferences.SliderPreference

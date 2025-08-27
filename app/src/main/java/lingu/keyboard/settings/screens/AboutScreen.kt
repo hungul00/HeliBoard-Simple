@@ -2,12 +2,8 @@
 package lingu.keyboard.settings.screens
 
 import android.app.Activity
-import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
-import android.text.method.LinkMovementMethod
-import android.view.View
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -21,14 +17,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.core.net.toUri
 import lingu.keyboard.latin.BuildConfig
 import lingu.keyboard.latin.R
-import lingu.keyboard.latin.common.Links
 import lingu.keyboard.latin.settings.DebugSettings
 import lingu.keyboard.latin.settings.Defaults
 import lingu.keyboard.latin.utils.Log
-import lingu.keyboard.latin.utils.SpannableStringUtils
 import lingu.keyboard.latin.utils.getActivity
 import lingu.keyboard.latin.utils.prefs
 import lingu.keyboard.settings.SettingsContainer
